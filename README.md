@@ -12,6 +12,23 @@ node: v20.11.0
 
 <br/>
 
+## 프로젝트 구조
+
+. <br/>
+├── contracts <br/>
+│   └── Election.sol <br/>
+├── hardhat.config.js <br/>
+├── package-lock.json <br/>
+├── .env <br/>
+├── package.json <br/>
+├── scripts <br/>
+│   └── deploy.js <br/>
+└── src <br/>
+      └── App.js <br/>
+
+
+<br/>
+
 ## React 프로젝트 생성
 
 ```shell
@@ -117,8 +134,6 @@ contract Election {
 ## 배포 스크립트 작성
 scripts/deploy.js
 ```js
-import {ethers} from "ethers";
-
 async function main() {
   const [deployer] = await ethers.getSigners();
 
@@ -157,8 +172,8 @@ L2RPC="https://sepolia-rollup.arbitrum.io/rpc"
 ```
 
 ## L2 RPC
-Alchemy를 사용하여 앱을 만든 후, Arbitrum Sepolia의 https 주소를 입력하면 된다.
-![img_3.png](img_3.png)
+Alchemy를 사용하여 앱을 만든 후, Arbitrum Sepolia의 https 주소를 입력하면 된다. <br/>
+![img_3.png](images/img_3.pngg_3.png)
 
 
 ## 스마트 컨트랙트 배포
@@ -168,6 +183,9 @@ Alchemy를 사용하여 앱을 만든 후, Arbitrum Sepolia의 https 주소를 �
 npx hardhat run scripts/deploy.js --network l2
 ```
 
+<br/>
+
+```shell
 contracts/Election.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-Licens
 e>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
 
@@ -178,6 +196,8 @@ constructor() public {
 Compiled 1 Solidity file successfully (evm target: istanbul).
 Deploying contracts with the account: 0xf2E1430cD32EC3cfF70CBD7169E616051452e32D
 Election contract deployed to: 0x2Ed9eD08106602FF7e507462F17340f1a308E241
+```
+
 
 
 <br/>
@@ -341,15 +361,43 @@ npm start
 
 <br/>
 
-아비트럼 새폴리아 네트워크로 전환해야 이용할 수 있다.
+http://localhost:3000/ 으로 웹에 접속하면 자동으로 메타마스크 지갑 연결 창이 뜬다. <br/>
+![img_4.png](images/img_4.pngg_4.png)
 
-https://chainlist.org/chain/421614 에서 아비트럼 새폴리아 네트워크를 추가하고 지갑에 연결 후
+<br/>
 
-![img.png](img.png)
+컨펌을 클릭해서 지갑 권한을 앱애 연결한다.
+
+![img_5.png](images/img_5.pngg_5.png)
+
+지갑이 연결되었다면 아비트럼 새폴리아 네트워크로 전환해야 앱을 이용할 수 있다.
+
+https://chainlist.org/chain/421614 에서 Connect Waller를 클릭해, 아비트럼 새폴리아 네트워크를 추가한다.
+
+![img.png](images/img.pngimg.png)
 
 
 
-네트워크를 전환해야  비로소 해당 네트워크에서 스마트컨트랙트를 사용하여 App을 실행할 수 있다. <br/>
-![img_1.png](img_1.png)
+메타마스크 지갑에 들어가서 추가한 아비트럼 새폴리아 네트워크로 전환해준다. 네트워크까지 변경해주어야 비로소 아비트럼 새폴리아의 스마트컨트랙트를 사용하여 App을 실행할 수 있다. <br/>
+![img_1.png](images/img_1.pngg_1.png)
 
-![img_2.png](img_2.png)
+
+<br/>
+
+Vote 버튼을 클릭하면 컨펌창이 뜨고 컨펌을 하게되면, 가스비가 나가며 <br/>
+![img_2.png](images/img_2.pngg_2.png)
+
+<br/>
+
+Votes가 오르게 된다. <br/>
+![img_6.png](images/img_6.pngg_6.png)
+
+<br/>
+
+지갑 -> 컨트랙트 트랜잭션 해시 <br/>
+![img_7.png](images/img_7.pngg_7.png)
+
+<br/>
+
+컨트랙트 확인 <br/>
+![img_8.png](images/img_8.pngg_8.png)
