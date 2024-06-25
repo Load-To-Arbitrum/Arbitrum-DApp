@@ -1,19 +1,19 @@
 pragma solidity ^0.7.0;
 
 contract Election {
-    // Model a Candidate
+    // 후보자 Model
     struct Candidate {
         uint256 id;
         string name;
         uint256 voteCount;
     }
 
-    // Store accounts that have voted
+    // 투표한 스토어 계정
     mapping(address => bool) public voters;
-    // Store Candidates
-    // Fetch Candidate
+    // 후보자 저장
+    // 후보자 가져오기
     mapping(uint256 => Candidate) public candidates;
-    // Store Candidates Count
+    // 후보자 수
     uint256 public candidatesCount;
 
     // voted event
@@ -30,19 +30,19 @@ contract Election {
     }
 
     function vote(uint256 _candidateId) public {
-        // require that they haven't voted before
+        // 이미 투표했다면 트랜잭션을 중단시킨다.
         require(!voters[msg.sender]);
 
-        // require a valid candidate
+        // 후보자 Id의 유효성을 확인한다.
         require(_candidateId > 0 && _candidateId <= candidatesCount);
 
-        // record that voter has voted
+        // 투표 기록을 남긴다.
         voters[msg.sender] = true;
 
-        // update candidate vote Count
+        // 해당 후보자의 투표수를 증가시킨다.
         candidates[_candidateId].voteCount++;
 
-        // trigger voted event
+        // 투표 이벤트 트리거
         emit votedEvent(_candidateId);
     }
 }

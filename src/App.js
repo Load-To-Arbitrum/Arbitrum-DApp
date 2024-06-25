@@ -86,7 +86,7 @@ function App() {
     try {
       await contract.vote(candidateId);
       setVoted(true);
-      fetchCandidates(); // 투표 후 후보자 데이터 다시 불러오기
+      fetchCandidates();
     } catch (error) {
       console.error('Error voting:', error);
       setError('Error voting');
