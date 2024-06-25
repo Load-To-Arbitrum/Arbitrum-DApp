@@ -204,7 +204,7 @@ function App() {
 
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
-  const contractAddress = '0x6Daf25EbAD3B0d8d4734E3cc2345E12a94746bc5'; // 배포된 컨트랙트 주소
+  const contractAddress = '0x2Ed9eD08106602FF7e507462F17340f1a308E241'; // 배포된 컨트랙트 주소
   const contract = new ethers.Contract(contractAddress, Election.abi, signer);
 
   useEffect(() => {
