@@ -173,7 +173,7 @@ L2RPC="https://sepolia-rollup.arbitrum.io/rpc"
 
 ## L2 RPC
 Alchemy를 사용하여 앱을 만든 후, Arbitrum Sepolia의 https 주소를 입력하면 된다. <br/>
-![img_3.png](images/img_3.pngg_3.png)
+![img_3.png](images/img_3.png)
 
 
 ## 스마트 컨트랙트 배포
@@ -362,42 +362,42 @@ npm start
 <br/>
 
 http://localhost:3000/ 으로 웹에 접속하면 자동으로 메타마스크 지갑 연결 창이 뜬다. <br/>
-![img_4.png](images/img_4.pngg_4.png)
+![img_4.png](images/img_4.png)
 
 <br/>
 
 컨펌을 클릭해서 지갑 권한을 앱애 연결한다.
 
-![img_5.png](images/img_5.pngg_5.png)
+![img_5.png](images/img_5.png)
 
 지갑이 연결되었다면 아비트럼 새폴리아 네트워크로 전환해야 앱을 이용할 수 있다.
 
 https://chainlist.org/chain/421614 에서 Connect Waller를 클릭해, 아비트럼 새폴리아 네트워크를 추가한다.
 
-![img.png](images/img.pngimg.png)
+![img.png](images/img.png)
 
 
 
 메타마스크 지갑에 들어가서 추가한 아비트럼 새폴리아 네트워크로 전환해준다. 네트워크까지 변경해주어야 비로소 아비트럼 새폴리아의 스마트컨트랙트를 사용하여 App을 실행할 수 있다. <br/>
-![img_1.png](images/img_1.pngg_1.png)
+![img_1.png](images/img_1.png)
 
 
 <br/>
 
 Vote 버튼을 클릭하면 컨펌창이 뜨고 컨펌을 하게되면, 가스비가 나가며 <br/>
-![img_2.png](images/img_2.pngg_2.png)
+![img_2.png](images/img_2.png)
 
 <br/>
 
 Votes가 오르게 된다. <br/>
-![img_6.png](images/img_6.pngg_6.png)
+![img_6.png](images/img_6.png)
 
 <br/>
 
 지갑 -> 컨트랙트 트랜잭션 해시 <br/>
-![img_7.png](images/img_7.pngg_7.png)
+![img_7.png](images/img_7.png)
 
 <br/>
 
 컨트랙트 확인 <br/>
-![img_8.png](images/img_8.pngg_8.png)
+![img_8.png](images/img_8.png)
